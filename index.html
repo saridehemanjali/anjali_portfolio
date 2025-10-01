@@ -1,41 +1,44 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  
-    <head>
-        <meta charset="UTF-8">
-        <meta http-eqiv="X-UA-Compactible" content="IE-edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Personal Portfolio website-Anjali</title>
-<link rel="styleSheet" href="style.css">
-    </head>
-    <body>
-        <div id="header">
-            <div class="container" >
-                <nav>
-                    <img src ="logo.png" class="logo">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about" >About</a></li>
-                        <li><a href="#service">Services</a></li>
-                        <li><a href="#port">Portfolio</a></li>
-                        <li><a href="#cont">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-text" >
-                    <p>Web developer</p>
-                    <h1>Hi,I'm <span>Hemanjali</span><br> a B.Tech graduate </h1>
-                </div>
-            </div>
-        </div>
-        <!--.......aboutMe....-->
-        <div id="about">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio website - Anjali</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Free Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img class="logo">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#port">Portfolio</a></li>
+          <li><a href="#follow-me">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Software developer</p>
+        <h1>Hi, I'm <span>Hemanjali</span><br>a B.Tech graduate</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div id="about">
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
                         <img src="hemasari.jpg">
                     </div>
                     <div class="about-col-2" id="about">
-                        <h1 class="sub-title">About Me</h1><br><br>
+                        <h1 class="subtitles">About Me</h1><br><br>
                         <h3>I am Hemanjali, a B.Tech graduate from Shri Vishnu Engineering College for Women, Bhimavaram.
                             My skills, experience, and education are reflected throughout this portfolio.
                             I have completed various courses and gained proficiency in programming languages such as C, 
@@ -47,16 +50,19 @@
                         </h3>
                         <br>
                     <div class="tab-titles" >
-                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links " onclick="opentab('Internships')">Internships</p>
                         <p class="tab-links " onclick="opentab('Projects')">Projects</p>
                         <p class="tab-links " onclick="opentab('Education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Coding</span><br>Hackerrank <a href=https://www.hackerrank.com/profile/anjalisaride546>profile</a>
-                                 <br>LeetCode <a href=https://leetcode.com/u/anjalisaride546 >profile</a> <br>Codechef <a href=https://www.codechef.com/users/anjalisari546 >profile</a> 
-                                 <br>CodeForces <a href=https://codeforces.com/profile/anjalisaride546>profile</a> </li>
+                            <li><span>Coding Platforms</span>
+                              <br>
+                                 <br>HackerRank :  <a href=https://www.hackerrank.com/profile/anjalisaride546><i class="fa-solid fa-code"> </i></a>
+                                 <br>LeetCode : <a href=https://leetcode.com/u/anjalisaride546 ><i class="fa-solid fa-code"> </i></a> 
+                                 <br>CodeChef : <a href=https://www.codechef.com/users/anjalisari546 > <i class="fa-solid fa-code"> </i> </a> 
+                                 <br>CodeForces : <a href=https://codeforces.com/profile/anjalisaride546><i class="fa-solid fa-code"> </i></a> </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Internships">
@@ -107,8 +113,9 @@
             </div>
         </div>
     </div>
-<!--.......services........-->
-    <div id="services">
+
+  <!-- Services -->
+      <div id="services">
         <div class="container" id="service">
             <h1 class="subtitles">My services</h1>
             <div class="services-list">
@@ -154,91 +161,92 @@
             </div>
         </div>
     </div>
-    <!--portfolio..............-->
-    <div id="portfolio">
-        <div class="container" id="port">
-            <h1 class="sub-title">My work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="work1.jpg">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talanted people around </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="work2.jpeg">
-                    <div class="layer">
-                        <h3>shopping App</h3>
-                        <p>The app connects you to the talanted people around </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="work3.jpg">
-                    <div class="layer">
-                        <h3>selling app</h3>
-                        <p>The app connects you to the talanted people around </p>
-                    </div>
-                </div>
-            </div>
-             <a href="#" class="button">See more</a>
+  <!-- Portfolio -->
+  <div id="portfolio">
+    <div class="container" id="port">
+      <h1 class="subtitles">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="work1-1.jpg">
+          <div class="layer">
+            <h3>Exploring and Visits</h3>
+            <p>The app connects you to talented people.</p>
+          </div>
         </div>
+        <div class="work">
+          <img src="work2-1.jpg">
+          <div class="layer">
+            <h3>Office work</h3>
+            <p>The app connects you to talented people.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="work3-1.jpg">
+          <div class="layer">
+            <h3>Planning time</h3>
+            <p>The app connects you to talented people.</p>
+          </div>
+        </div>
+         <div class="work">
+          <img src="work4.jpg">
+          <div class="layer">
+            <h3>My fav Hobby</h3>
+            <p>The app connects you to talented people.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button">See more</a>
     </div>
-    <!---contact...........-->
-    <div id="contact">
-        <div class="container" id="cont">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact me</h1>
-                    <br>
-                    <br>
-                    <p>Hemanjali Saride</p><br>
-                    <p>Email:
-                    <a href="mailto:anjalisaride546@gmail.com" style="color: rgb(255, 165, 0);">
-                     anjalisaride546@gmail.com
-                   </a>
-                    </p>
-                    <br>
-                    <p>GitHub: <a href="https://github.com/saridehemanjali" style="color: rgb(20, 133, 167);">Hemanjali_Git</a></p><br>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/hemanjali-saride-6a94a4250/" style="color: rgb(188, 205, 37);">Hemanjali_Ln</a></p><br>
-                    <p>Medium: <a href="https://medium.com/@anjalisaride546" style="color: rgb(37, 205, 82);">Hemanjali_md</a></p>
-                    <br>
-                    <br>
-                    <br>
-                    <a href="work.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="Submit" class="btn btn2 ">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>copyright @anjali.made with by anjali<i class="fas fa-heart"></i>
-            </p>
-        </div>
+  </div>
+
+  <!-- Follow Me Section -->
+  <div id="follow-me">
+    <div class="container">
+      <h1 class="sub-title">Follow me for more 🚀</h1>
+      <div class="social-icons">
+        <a href="https://github.com/saridehemanjali" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <p>GitHub</p>
+        </a>
+        <a href="https://www.linkedin.com/in/hemanjali-saride-6a94a4250/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+          <p>LinkedIn</p>
+        </a>
+        <a href="https://medium.com/@anjalisaride546" target="_blank">
+          <i class="fa-brands fa-medium"></i>
+          <p>Medium</p>
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=anjalisaride546@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Email</p>
+        </a>
+        <!-- ✅ Added Topmate -->
+        <a href="https://topmate.io/hemanjali_saride/" target="_blank">
+          <i class="fa-solid fa-globe"></i>
+          <p>Topmate</p>
+        </a>
+      </div>
     </div>
-    <script>
-        var tablinks=document.getElementsByClassName("tab-links");
-        var tabcontents=document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    </body>
+    <div class="copyright">
+      <p>© Hemanjali Saride </p>
+    </div>
+  </div>
+
+  <!-- Script for Tabs -->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
 </html>
-
-
-
-
