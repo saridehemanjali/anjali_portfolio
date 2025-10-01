@@ -11,7 +11,7 @@ body{
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(gan.png);
+    background-image: url(gan-1.png);
     background-size: cover;
     background-position: center;
 }
@@ -27,29 +27,39 @@ nav{
 }
 .logo
 {
-    width:140 px;
+    width:100 px;
 }
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 20px 10px;
 }
 nav ul li a{
-    color:#fff;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
+    color:#100b0f;
+    text-decoration:none;
+    font-style: i;
+    font-weight: 700;
+    font-size:20px;
+    position:relative;
+    padding:5px 0;
+    transition:color 0.3s ease;
 }
-nav ul li a ::after{
-    content:'';
-    width:0;
-    height:3px;
-    background:#4609df;
+nav ul li a::after{
+    content:"";
     position:absolute;
     left:0;
-    bottom: -6px;
-    transition:0.5s
+    bottom:0;
+    width:0;
+    height:3px;
+    background:linear-gradient(90deg, #056133, #78e7a6, #4ba862);
+    transition:width 0.4s ease;
 }
+
+nav ul li a:hover {
+  color:#f5e663;
+  
+}
+
 nav ul li a:hover::after{
     width:100%;
 
@@ -61,6 +71,10 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size:50px;
     margin-top:20px;
+}
+.header-text:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 .header-text h1 span{
     color:rgb(239, 239, 79);
@@ -95,6 +109,7 @@ nav ul li a:hover::after{
     display:flex;
     margin:20px 0 40px;
 }
+
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
@@ -102,19 +117,21 @@ nav ul li a:hover::after{
     cursor: pointer;
     position: relative;
 }
+
 .tab-links::after{
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(195, 195, 38);
+    background: rgb(214, 242, 124);
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
 }
 .tab-links.active-link::after{
-    width: 50%;
+    width: 100%;
 }
+
 .tab-contents ul li{
     list-style:none;
     margin: 10px 0;
@@ -176,7 +193,7 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px, 1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px, 1fr));
     grid-gap:40px;
     margin-top: 50px;
 }
@@ -203,7 +220,6 @@ nav ul li a:hover::after{
     display:flex;
     align-items:center;
     justify-content: center;
-    flex-direction: column;
     padding: 0 40px;
     text-align:center;
     font-size: 14px;
@@ -244,72 +260,68 @@ nav ul li a:hover::after{
     background: rgb(118, 122, 4);
 }
 
-/*--------Contact-------*/
-.contact-left{
-    flex-basis:35% ;
+/* ------- Follow Me Section ------- */
+#follow-me {
+    padding: 60px 0;
+    background: #111;   /* dark background for contrast */
+    color: #fff;
 }
 
-.contact-right{
-    flex-basis:60%;
-}
-.contact-left p{
-    margin-top:30 px;
-}
-.contact-left p i{
-    color:#ff004f;
-    margin-left:15px;
-    font-size:25px;
-}
-.btn.btn2{
-    display:block;
-    margin:50px auto;
-    width:fit-content;
-    background-color:#ff004f;
-    border:1px solid yellow;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: white;
-    transition: background 0.5s;
-}
-.btn.btn2:hover{
-    background: rgb(121, 123, 4);
+#follow-me .sub-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e6f44c;  /* highlight title */
 }
 
-.contact-right form {
-    width:100%;
-
-}
-form input,form textarea{
-    width:100%;
-    border:0;
-    outline:none;
-    background:#262626;
-    padding: 15px;
-    margin:15px 0;
-    color:#fff;
-    font-size :18px;
-    border-radius:6px;
-}
-form btn{
-    padding:14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-
-}
-.copyright{
-    width:100%;
-    text-align:center;
-    padding:25px 0;
-    background: #262626;
-    font-weight:300;
+/* Social icons container */
+/* Social icons container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
-.copyright i{
-    color:#ff004f;
+
+.social-icons a {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;   /* ✅ removes underline */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.sub-title{
-    font-size: 40px;
+.social-icons a i {
+    font-size: 45px;
+    margin-bottom: 8px;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+/* Hover effect */
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icons a:hover p {
+    color: #e2e95d;  /* golden highlight when hovered */
+    font-weight: bold;
+}
+
+/* Copyright section */
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #1e1e1e;
+    font-weight: 300;
+    margin-top: 40px;
+    color: #aaa;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
