@@ -1,8 +1,8 @@
 *{
-    margin:0;
-    padding:0;
-    font-family:'poppins',sans-serif;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:'poppins',sans-serif;
+box-sizing:border-box;
 }
 body {
   background: #000; /* fallback only */
@@ -10,8 +10,11 @@ body {
 }
 
 #header {
-  background: none; /* hero image only */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;       /* desktop hero height */
 }
+
 
 
 .container {
@@ -82,10 +85,15 @@ nav ul li a:hover::after{
 
 }
 .header-text {
+  position: relative;      /* normal flow inside hero */
+  margin-top: 200px;
+  max-width: 600px;
   font-size: 30px;
-  padding-top: 120px;
-  margin: 0;           /* 🔥 IMPORTANT */
+  text-align: left;
+  transform-origin: left center;   /* 🔥 */
+  transition: transform 0.3s ease-in-out;
 }
+
 
 .header-text h1{
     font-size:50px;
@@ -378,10 +386,15 @@ nav ul li a:hover::after{
 
 
 .hero-bg {
+  position: absolute;      /* 🔥 key fix */
+  inset: 0;
   width: 100%;
-  height: auto;              /* 🔥 image decides height */
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+   overflow: hidden;
 }
+
 
 
 
@@ -404,9 +417,22 @@ nav ul li a:hover::after{
 
 
 @media (max-width: 768px) {
-    .header-text {
-    bottom: 15%;
-    font-size: 20px;
+      #header {
+    min-height: auto;
+  }
+
+  .hero-bg {
+    position: relative;      /* image defines height */
+    width: 100%;
+    height: auto;
+    object-fit: contain;     /* 🔥 NO CUT */
+  }
+
+  .header-text {
+    position: absolute;
+    bottom: 12%;
+    text-align: left;
+    width: 100%;
   }
 
   .header-text h1 {
@@ -414,7 +440,7 @@ nav ul li a:hover::after{
   }
 
   .header-text p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
     .profile-img {
@@ -441,6 +467,25 @@ nav ul li a:hover::after{
     display: flex;
   }
 
+  .about-col-1 {
+    display: flex;
+    justify-content: center;
+    margin-top: -120px; /* pulls image upward */
+  }
+
+  .profile-img {
+    max-width: 90%;
+    width: 260px;        /* increase size */
+    height: auto;        /* keep aspect ratio */
+    max-width: 90%;      /* prevent overflow */
+    transform: translateY(-60px) scale(1.15);
+    transition: transform 0.6s ease;
+  }
+
+  /* Reduce About section top padding */
+  #about {
+    padding-top: 40px;    /* 🔥 removes black gap */
+  }
 
 
 }
