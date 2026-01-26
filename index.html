@@ -14,15 +14,25 @@
   <div id="header">
     <div class="container">
       <nav>
-        <img class="logo">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#port">Portfolio</a></li>
-          <li><a href="#follow-me">Contact</a></li>
-        </ul>
-      </nav>
+  
+  <!-- Hamburger Button -->
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#service">Services</a></li>
+    <li><a href="#port">Portfolio</a></li>
+    <li><a href="#follow-me">Contact</a></li>
+  </ul>
+</nav>
+<!-- BACKGROUND IMAGE -->
+    <img src="anjali.png" alt="Background" class="hero-bg" />
+
       <div class="header-text">
         <p>Software developer</p>
         <h1>Hi, I'm <span>Hemanjali</span><br>a B.Tech graduate</h1>
@@ -35,7 +45,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="hemasari.jpg">
+                        <img src="hemasari.jpg" alt="Hemanjali" class="profile-img">
                     </div>
                     <div class="about-col-2" id="about">
                         <h1 class="subtitles">About Me</h1><br><br>
@@ -248,6 +258,27 @@
       document.getElementById(tabname).classList.add("active-tab");
     }
   </script>
+  <script>
+function toggleMenu() {
+  const nav = document.querySelector(".nav-links");
+  const burger = document.querySelector(".hamburger");
+  nav.classList.toggle("active");
+  burger.classList.toggle("active");
+
+  // Optional: Animate hamburger into X
+  const spans = burger.querySelectorAll("span");
+  if(burger.classList.contains("active")){
+    spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+    spans[1].style.opacity = "0";
+    spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+  } else {
+    spans[0].style.transform = "rotate(0) translate(0,0)";
+    spans[1].style.opacity = "1";
+    spans[2].style.transform = "rotate(0) translate(0,0)";
+  }
+}
+</script>
+
 </body>
 </html>
 
